@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd frontend/simple-tracker && npm run build",
+  "outputDirectory": "frontend/simple-tracker/dist",
+  "framework": "vite",
+  "installCommand": "cd frontend/simple-tracker && npm install",
+  "nodeVersion": "18.x"
+}

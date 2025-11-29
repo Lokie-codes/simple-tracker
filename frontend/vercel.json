@@ -1,7 +1,7 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "cd simple-tracker && npm run build",
   "outputDirectory": "simple-tracker/dist",
   "framework": "vite",
-  "installCommand": "npm install",
-  "nodeVersion": "18.x"
+  "installCommand": "cd simple-tracker && npm install"
 }
+
