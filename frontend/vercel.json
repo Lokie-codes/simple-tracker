@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "simple-tracker/dist",
+  "framework": "vite",
+  "installCommand": "npm install",
+  "nodeVersion": "18.x"
+}

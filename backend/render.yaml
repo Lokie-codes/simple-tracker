@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: simple-tracker-backend
+    env: python
+    region: ohio
+    plan: free
+    buildCommand: pip install -r requirements.txt; python manage.py collectstatic --noinput; python manage.py migrate
+    startCommand: gunicorn config.wsgi:application
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: "*.onrender.com,localhost"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: simple-tracker-db
+          property: connectionString
+
+databases:
+  - name: simple-tracker-db
+    plan: free
+    region: ohio
